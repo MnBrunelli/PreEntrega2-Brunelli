@@ -8,10 +8,10 @@ const products = [
   { id: "6", name: "Camiseta Uruguay Alternativa", price: 12950, stock: 10, categoria: "uruguay", photo: "https://www.lavoz.com.ar/resizer/yE8G7u8i4kYRmbsgjgqgwtruUnc=/1023x1150/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/G6O5ULPO7ZG7REUUUM2AD7XDOE.jpeg" },
 ];
 
-export const gFetch = () => {
+export const gFetch = (id) => {
   return new Promise((res, rej) => {
     setTimeout(() => {
-      res(products);
-    }, 1800);
+      res(id ? products.find((prod) => prod.id === id) : products);
+    }, 3000);
   });
 };

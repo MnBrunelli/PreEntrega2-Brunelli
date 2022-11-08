@@ -1,5 +1,10 @@
 const NotFound404 = () => {
-  return <div> La ruta especificada no se encuentra! NotFound 404</div>;
+  return (
+    <div>
+      <h3>La ruta especificada no se encuentra!</h3>
+      <p> NotFound 404 </p>
+    </div>
+  );
 };
 
 export default NotFound404;
